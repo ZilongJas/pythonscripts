@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
+# This script enables you to ping to multiple addresses
+# and display their status in one place without opening multiple terminals
+
 import platform
 import os
 import datetime
 import time
 
-SAFE_HOSTS = {
+addresses = {
 # add more entries here:
 #
 #
@@ -25,7 +28,7 @@ def ping_host(ip):
     return os.system(cmd)
 
 def check_network_health():
-    for name, ip in SAFE_HOSTS.items():
+    for name, ip in addresses.items():
         result = ping_host(ip)
         status = "REACHABLE" if result == 0 else "UNREACHABLE"
         print(f"({ip}): {status}")

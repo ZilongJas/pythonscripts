@@ -5,6 +5,9 @@ import datetime
 import time
 
 SAFE_HOSTS = {
+# add more entries here:
+#
+#
     "Google DNS": "8.8.8.8",
     "Cloudflare DNS": "1.1.1.1"
 }
